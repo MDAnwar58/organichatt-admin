@@ -1,0 +1,16 @@
+.color-picker .react-colorful {
+  height: 140px;
+  width: 100%;
+}
+.color-picker .react-colorful .react-colorful__saturation {
+  border-radius: 10px 10px 0 0;
+}
+.color-picker .react-colorful .react-colorful__hue {
+  height: 35px;
+  border-radius: 0 0 10px 10px;
+}
+.color-picker .react-colorful .react-colorful__hue-pointer {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}

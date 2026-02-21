@@ -8,55 +8,55 @@ import { Helmet } from "react-helmet";
 import PageContent from "../components/PageContent";
 
 export default function Gallery() {
-  const [openModal, setOpenModal] = useState(false);
-  const [page, setPage] = useState(1);
-  const [limit] = useState(8);
-  const [totalPage, setTotalPage] = useState(0);
-  const [selectItemId, setSelectItemId] = useState("");
-  const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
+   const [openModal, setOpenModal] = useState(false);
+   const [page, setPage] = useState(1);
+   const [limit] = useState(8);
+   const [totalPage, setTotalPage] = useState(0);
+   const [selectItemId, setSelectItemId] = useState("");
+   const [search, setSearch] = useState("");
+   const [loading, setLoading] = useState(true);
 
-  const [ids, setIds] = useState([]);
-  const { sideBar } = useOutletContext();
+   const [ids, setIds] = useState([]);
+   const { sideBar } = useOutletContext();
 
-  return (
-    <Provider store={store}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Organ Admin - Galleries</title>
-      </Helmet>
+   return (
       <PageContent>
-        <GalleryTableHeader
-          sideBar={sideBar}
-          setOpenModal={setOpenModal}
-          selectItemId={selectItemId}
-          setSelectItemId={setSelectItemId}
-          page={page}
-          limit={limit}
-          setTotalPage={setTotalPage}
-          search={search}
-          setSearch={setSearch}
-          setPage={setPage}
-          ids={ids}
-          setLoading={setLoading}
-        />
-        <GalleryTable
-          sideBar={sideBar}
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-          page={page}
-          limit={limit}
-          totalPage={totalPage}
-          setPage={setPage}
-          setTotalPage={setTotalPage}
-          selectItemId={selectItemId}
-          search={search}
-          ids={ids}
-          setIds={setIds}
-          loading={loading}
-          setLoading={setLoading}
-        />
+         <Helmet>
+            <meta charSet="utf-8" />
+            <title>Organ Admin - Galleries</title>
+         </Helmet>
+         <Provider store={store}>
+            <GalleryTableHeader
+               sideBar={sideBar}
+               setOpenModal={setOpenModal}
+               selectItemId={selectItemId}
+               setSelectItemId={setSelectItemId}
+               page={page}
+               limit={limit}
+               setTotalPage={setTotalPage}
+               search={search}
+               setSearch={setSearch}
+               setPage={setPage}
+               ids={ids}
+               setLoading={setLoading}
+            />
+            <GalleryTable
+               sideBar={sideBar}
+               openModal={openModal}
+               setOpenModal={setOpenModal}
+               page={page}
+               limit={limit}
+               totalPage={totalPage}
+               setPage={setPage}
+               setTotalPage={setTotalPage}
+               selectItemId={selectItemId}
+               search={search}
+               ids={ids}
+               setIds={setIds}
+               loading={loading}
+               setLoading={setLoading}
+            />
+         </Provider>
       </PageContent>
-    </Provider>
-  );
+   );
 }

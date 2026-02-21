@@ -1,19 +1,21 @@
 import React from "react";
 
 export default function Form({
-  children,
-  formRef,
-  className,
+   children,
+   formRef,
+   className,
+   onSubmit,
 }: {
-  children?: any;
-  formRef?: any;
-  className?: any;
+   children?: any;
+   formRef?: any;
+   className?: any;
+   onSubmit?: React.FormEventHandler<HTMLFormElement> | undefined;
 }) {
-  return (
-    <div className={className}>
-      <form ref={formRef} className="max-w-sm mx-auto">
-        {children}
-      </form>
-    </div>
-  );
+   return (
+      <div className={className}>
+         <form onSubmit={onSubmit} ref={formRef} className="">
+            {children}
+         </form>
+      </div>
+   );
 }

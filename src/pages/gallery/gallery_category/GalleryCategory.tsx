@@ -8,21 +8,21 @@ import PageContent from "../../components/PageContent";
 import { Helmet } from "react-helmet";
 
 export default function GalleryCategory() {
-  const [openModal, setOpenModal] = useState(false);
+   const [openModal, setOpenModal] = useState(false);
 
-  return (
-    <Provider store={store}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Organ Admin - Gallery Categories</title>
-      </Helmet>
+   return (
       <PageContent>
-        <GalleryCategoryTableHeader setOpenModal={setOpenModal} />
-        <GalleryCategoryTable
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-        />
+         <Helmet>
+            <meta charSet="utf-8" />
+            <title>Organ Admin - Gallery Categories</title>
+         </Helmet>
+         <Provider store={store}>
+            <GalleryCategoryTableHeader setOpenModal={setOpenModal} />
+            <GalleryCategoryTable
+               openModal={openModal}
+               setOpenModal={setOpenModal}
+            />
+         </Provider>
       </PageContent>
-    </Provider>
-  );
+   );
 }

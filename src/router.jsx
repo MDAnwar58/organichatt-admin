@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import SignIn from "./pages/auth/SignIn";
 import Layout from "./Layout";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -39,170 +38,221 @@ import BannerEdit from "./pages/banner/banner_edit/BannerEdit";
 import Offer from "./pages/offer/Offer";
 import OfferCreate from "./pages/offer/offer_create/OfferCreate";
 import OfferEdit from "./pages/offer/offer_edit/OfferEdit";
+import Orders from "./pages/orders/Orders";
+import OrderInvoice from "./pages/orders/Invoice/OrderInvoice";
+import OrderDetails from "./pages/orders/order/OrderDetails";
+import Users from "./pages/users/Users";
+import UserCreate from "./pages/users/user_create/UserCreate";
+import UserEdit from "./pages/users/user_edit/UserEdit";
+import App from "./App";
+import PrivacyPolicy from "./pages/privacy-policy/PrivacyPolicy";
+import TermsAndCondition from "./pages/terms-and-condition/TermsAndCondition";
+import SocialLinks from "./pages/social-links/SocialLinks";
+import Reviews from "./pages/reviews/Reviews";
 
 const routes = [
-  // {
-  //   path: "/",
-  //   element: <App />,
-  // },
-  {
-    path: "/",
-    element: <SignIn />,
-  },
-  {
-    path: "",
-    element: <Layout />,
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/collections",
-        element: <Collection />,
-      },
-      {
-        path: "/collection-create",
-        element: <CollectionCreate />,
-      },
-      {
-        path: "/collection-edit/:id",
-        element: <CollectionEdit />,
-      },
-      {
-        path: "/brands",
-        element: <Brand />,
-      },
-      {
-        path: "/brand-create",
-        element: <BrandCreate />,
-      },
-      {
-        path: "/brand-edit/:id",
-        element: <BrandEdit />,
-      },
-      {
-        path: "/categories",
-        element: <Category />,
-      },
-      {
-        path: "/category-create",
-        element: <CategoryCreate />,
-      },
-      {
-        path: "/category-edit/:id",
-        element: <CategoryEdit />,
-      },
-      {
-        path: "/sub-categories",
-        element: <SubCategory />,
-      },
-      {
-        path: "/sub-category-create",
-        element: <SubCategoryCreate />,
-      },
-      {
-        path: "/sub-category-edit/:id",
-        element: <SubCategoryEdit />,
-      },
-      {
-        path: "/colors",
-        element: <Color />,
-      },
-      {
-        path: "/color-create",
-        element: <ColorCreate />,
-      },
-      {
-        path: "/color-edit/:id",
-        element: <ColorEdit />,
-      },
-      {
-        path: "/sizes",
-        element: <Size />,
-      },
-      {
-        path: "/size-create",
-        element: <SizeCreate />,
-      },
-      {
-        path: "/size-edit/:id",
-        element: <SizeEdit />,
-      },
-      {
-        path: "/size-numbers",
-        element: <SizeNumber />,
-      },
-      {
-        path: "/size-number-create",
-        element: <SizeNumberCreate />,
-      },
-      {
-        path: "/size-number-edit/:id",
-        element: <SizeNumberEdit />,
-      },
-      {
-        path: "/weights",
-        element: <Weight />,
-      },
-      {
-        path: "/weight-create",
-        element: <WeightCreate />,
-      },
-      {
-        path: "/weight-edit/:id",
-        element: <WeightEdit />,
-      },
-      {
-        path: "/products",
-        element: <Product />,
-      },
-      {
-        path: "/product-create",
-        element: <ProductCreate />,
-      },
-      {
-        path: "/product-edit/:id",
-        element: <ProductEdit />,
-      },
-      {
-        path: "/gallery-category",
-        element: <GalleryCategory />,
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />,
-      },
-      {
-        path: "/gallery-trust-bin",
-        element: <GalleryTrustBin />,
-      },
-      {
-        path: "/banners",
-        element: <Banner />,
-      },
-      {
-        path: "/banner-create",
-        element: <BannerCreate />,
-      },
-      {
-        path: "/banner-edit/:id",
-        element: <BannerEdit />,
-      },
-      {
-        path: "/offers",
-        element: <Offer />,
-      },
-      {
-        path: "/offer-create",
-        element: <OfferCreate />,
-      },
-      {
-        path: "/offer-edit/:id",
-        element: <OfferEdit />,
-      },
-    ],
-  },
+   {
+      path: "/",
+      element: <App />,
+   },
+   {
+      path: "/login",
+      element: <SignIn />,
+   },
+   {
+      path: "",
+      element: <Layout />,
+      children: [
+         {
+            path: "/dashboard",
+            element: <Dashboard />,
+         },
+         {
+            path: "/collections",
+            element: <Collection />,
+         },
+         {
+            path: "/users",
+            element: <Users />,
+         },
+         {
+            path: "/user-create",
+            element: <UserCreate />,
+         },
+         {
+            path: "/user-edit/:id",
+            element: <UserEdit />,
+         },
+         {
+            path: "/collection-create",
+            element: <CollectionCreate />,
+         },
+         {
+            path: "/collection-edit/:id",
+            element: <CollectionEdit />,
+         },
+         {
+            path: "/brands",
+            element: <Brand />,
+         },
+         {
+            path: "/brand-create",
+            element: <BrandCreate />,
+         },
+         {
+            path: "/brand-edit/:id",
+            element: <BrandEdit />,
+         },
+         {
+            path: "/categories",
+            element: <Category />,
+         },
+         {
+            path: "/category-create",
+            element: <CategoryCreate />,
+         },
+         {
+            path: "/category-edit/:id",
+            element: <CategoryEdit />,
+         },
+         {
+            path: "/sub-categories",
+            element: <SubCategory />,
+         },
+         {
+            path: "/sub-category-create",
+            element: <SubCategoryCreate />,
+         },
+         {
+            path: "/sub-category-edit/:id",
+            element: <SubCategoryEdit />,
+         },
+         {
+            path: "/colors",
+            element: <Color />,
+         },
+         {
+            path: "/color-create",
+            element: <ColorCreate />,
+         },
+         {
+            path: "/color-edit/:id",
+            element: <ColorEdit />,
+         },
+         {
+            path: "/sizes",
+            element: <Size />,
+         },
+         {
+            path: "/size-create",
+            element: <SizeCreate />,
+         },
+         {
+            path: "/size-edit/:id",
+            element: <SizeEdit />,
+         },
+         {
+            path: "/size-numbers",
+            element: <SizeNumber />,
+         },
+         {
+            path: "/size-number-create",
+            element: <SizeNumberCreate />,
+         },
+         {
+            path: "/size-number-edit/:id",
+            element: <SizeNumberEdit />,
+         },
+         {
+            path: "/weights",
+            element: <Weight />,
+         },
+         {
+            path: "/weight-create",
+            element: <WeightCreate />,
+         },
+         {
+            path: "/weight-edit/:id",
+            element: <WeightEdit />,
+         },
+         {
+            path: "/products",
+            element: <Product />,
+         },
+         {
+            path: "/product-create",
+            element: <ProductCreate />,
+         },
+         {
+            path: "/product-edit/:id",
+            element: <ProductEdit />,
+         },
+         {
+            path: "/gallery-category",
+            element: <GalleryCategory />,
+         },
+         {
+            path: "/gallery",
+            element: <Gallery />,
+         },
+         {
+            path: "/gallery-trust-bin",
+            element: <GalleryTrustBin />,
+         },
+         {
+            path: "/offers",
+            element: <Offer />,
+         },
+         {
+            path: "/offer-create",
+            element: <OfferCreate />,
+         },
+         {
+            path: "/offer-edit/:id",
+            element: <OfferEdit />,
+         },
+         {
+            path: "/orders",
+            element: <Orders />,
+         },
+         {
+            path: "/order/:id",
+            element: <OrderDetails />,
+         },
+         {
+            path: "/order-invoice/:id",
+            element: <OrderInvoice />,
+         },
+         {
+            path: "/reviews",
+            element: <Reviews />,
+         },
+         {
+            path: "/banners",
+            element: <Banner />,
+         },
+         {
+            path: "/banner-create",
+            element: <BannerCreate />,
+         },
+         {
+            path: "/banner-edit/:id",
+            element: <BannerEdit />,
+         },
+         {
+            path: "/privacy-policy",
+            element: <PrivacyPolicy />,
+         },
+         {
+            path: "/term-and-condition",
+            element: <TermsAndCondition />,
+         },
+         {
+            path: "/social-links",
+            element: <SocialLinks />,
+         },
+      ],
+   },
 ];
 
 export const router = createBrowserRouter(routes);
